@@ -1,0 +1,124 @@
+/* Setu landing: brand fonts (self-hosted) and polish on top of the Vyasa tokens. */
+@font-face { font-family: Inter; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url(fonts/inter-latin.woff2) format("woff2"); }
+@font-face { font-family: Sora; font-style: normal; font-weight: 100 800; font-display: swap;
+  src: url(fonts/sora-latin.woff2) format("woff2"); }
+
+:root {
+  --setu-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --setu-glow: color-mix(in srgb, var(--vy-color-primary) 16%, transparent);
+}
+body.vy { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-feature-settings: "cv11", "ss01"; }
+h1, h2, h3, .vy-hero-title, .vy-section-title, .vy-cta-title { font-family: Sora, Inter, system-ui, sans-serif; }
+
+/* Masthead -------------------------------------------------------------- */
+.vy-masthead { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding-inline: max(1.25rem, calc((100% - var(--vy-content-width)) / 2));
+  background: color-mix(in srgb, var(--vy-color-bg) 86%, transparent); backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--vy-color-border); }
+.vy-masthead > .vy-header, .vy-masthead > .vy-nav { padding: 0; border: 0; width: auto; max-width: none; margin: 0; }
+.vy-masthead > .vy-header { padding-block: .8rem; }
+.vy-tagline { display: none; }
+.vy-site-name { display: inline-flex; align-items: center; gap: .6rem; font-family: Sora, Inter, sans-serif; font-weight: 700;
+  font-size: 1.35rem; letter-spacing: -.02em; text-decoration: none; color: var(--vy-color-text); }
+.vy-logo-mark { display: none; }
+.vy-site-name::before { content: ""; width: 1.9rem; height: 1.9rem; border-radius: .5rem; flex: none;
+  background: url(images/setu-icon.svg) center / contain no-repeat; }
+.vy-nav .vy-menu a { font-size: .95rem; color: var(--vy-color-text-muted); }
+.vy-nav .vy-menu a:hover { color: var(--vy-color-primary); }
+.vy-masthead .vy-nav .vy-menu li:last-child a { color: var(--vy-color-on-primary); background: var(--vy-color-primary); padding: .45rem .9rem; border-radius: 999px; font-weight: 600; }
+.vy-masthead .vy-nav .vy-menu li:last-child a:hover { color: var(--vy-color-on-primary); filter: brightness(1.1); }
+@media (max-width: 960px) {
+  .vy-masthead { flex-wrap: wrap; position: static; }
+  .vy-masthead > .vy-nav { margin-inline-start: auto; }
+}
+.vy-main { padding-block: 0; max-width: none; padding-inline: 0; }
+
+/* Sections ------------------------------------------------------------- */
+.vy-section > * { max-width: var(--vy-content-width); margin-inline: auto; padding-inline: 1.25rem; }
+.vy-section { padding-block: clamp(3rem, 7vw, 5.5rem); }
+.vy-section.vy-section--hero { padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2rem, 4vw, 3rem); }
+.vy-section--code-tabs { padding-top: 0; }
+.vy-product { border: 0; padding-block: 0; }
+.vy-section-title { font-size: clamp(1.7rem, 3.6vw, 2.4rem); letter-spacing: -.03em; line-height: 1.15; text-align: center; margin: 0 auto .6rem; }
+.vy-section-intro { text-align: center; margin: 0 auto 2.5rem; max-width: 46rem; color: var(--vy-color-text-muted); }
+.vy-eyebrow { font-family: Inter, sans-serif; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--vy-color-primary); }
+
+/* Hero ------------------------------------------------------------------ */
+.vy-section--hero { background:
+  radial-gradient(60rem 28rem at 50% -8rem, var(--setu-glow), transparent 70%), var(--vy-color-bg); }
+.vy-hero { text-align: center; max-width: 60rem; padding: 0; }
+.vy-hero .vy-eyebrow { display: inline-block; padding: .3rem .8rem; border: 1px solid var(--vy-color-border); border-radius: 999px;
+  background: var(--vy-color-surface); margin: 0 0 1.4rem; }
+.vy-hero-title { font-size: clamp(2.3rem, 6.2vw, 4.2rem); line-height: 1.06; letter-spacing: -.045em; margin: 0 0 1.2rem; text-wrap: balance; }
+.vy-hero-sub { font-size: clamp(1.02rem, 1.6vw, 1.2rem); max-width: 42rem; margin-inline: auto; color: var(--vy-color-text-muted); }
+.vy-actions { justify-content: center; gap: .8rem; margin-top: 2rem; }
+.vy-btn { padding: .8rem 1.4rem; border-radius: 999px; font-weight: 600; text-decoration: none; }
+.vy-btn-primary { box-shadow: 0 8px 24px -8px var(--vy-color-primary); }
+
+/* Install terminal -------------------------------------------------------- */
+.vy-code-tabs .vy-section-title, .vy-code-tabs .vy-section-intro { text-align: center; }
+.vy-code-examples { max-width: 54rem; margin-inline: auto; background: #0b1020; border: 1px solid #232a46; border-radius: 16px;
+  box-shadow: 0 24px 60px -24px rgba(79, 70, 229, .45); }
+.vy-code-tabs [role=tablist] { border-bottom: 1px solid #232a46; background: #0e1430; padding: .6rem; }
+.vy-code-tabs button { background: transparent; border: 1px solid transparent; color: #9ca4b4; border-radius: 8px; font-size: .85rem; }
+.vy-code-tabs [role=tab][aria-selected=true] { background: #1b2247; color: #fff; border-color: #2a3262; }
+.vy-code-example { position: relative; padding: 1.1rem 1.25rem 1.25rem; color: #e5e7f0; }
+.vy-code-example h3, .vy-code-language { display: none; }
+.vy-code-example pre { background: transparent; border: 0; padding: 0; margin: 0; overflow: visible; }
+.vy-code-example code { white-space: pre-wrap; word-break: break-all; font-family: var(--setu-mono); font-size: .92rem; line-height: 1.7; color: #e5e7f0; }
+.vy-code-example pre::before { content: "$ "; color: #818cf8; font-family: var(--setu-mono); user-select: none; }
+.vy-code-example > button { margin-top: 1rem; background: #4f46e5; color: #fff; border-color: transparent; font-weight: 600; font-size: .85rem; padding: .45rem .9rem; }
+.vy-code-feedback { color: #a5b4fc; }
+
+/* Cards ------------------------------------------------------------------- */
+.vy-product-items { gap: 1.1rem; }
+.vy-product-items > li { background: var(--vy-color-bg); border-color: var(--vy-color-border); box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+  padding: 1.6rem; transition: border-color .15s, transform .15s; }
+.vy-scope-how .vy-product-items > li, .vy-scope-built-for .vy-product-items > li, .vy-scope-roadmap .vy-product-items > li { background: var(--vy-color-bg); }
+.vy-product-items > li:hover { border-color: color-mix(in srgb, var(--vy-color-primary) 55%, var(--vy-color-border)); }
+.vy-product-items h3 { margin: .5rem 0 .55rem; font-size: 1.12rem; letter-spacing: -.01em; }
+.vy-product-items p { margin: 0; color: var(--vy-color-text-muted); font-size: .96rem; line-height: 1.6; }
+.vy-product-items code { font-family: var(--setu-mono); font-size: .88em; background: var(--vy-color-surface); padding: .1em .35em; border-radius: 4px; }
+.vy-product-items .vy-eyebrow, .vy-flow-label { display: block; font-size: .72rem; }
+.vy-step-number { display: inline-flex; width: 2rem; height: 2rem; align-items: center; justify-content: center; border-radius: 50%;
+  background: color-mix(in srgb, var(--vy-color-primary) 14%, transparent); color: var(--vy-color-primary); font-weight: 700; margin: 0 .6rem 0 0; }
+.vy-status { font-weight: 600; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; }
+.vy-product-items a { color: inherit; text-decoration: none; }
+.vy-product-items a:hover { color: var(--vy-color-primary); }
+
+/* CTA and footer ------------------------------------------------------------ */
+.vy-cta { text-align: center; padding-block: 1rem; }
+.vy-cta-title { font-size: clamp(1.7rem, 4vw, 2.6rem); letter-spacing: -.03em; margin: 0 0 .6rem; color: #fff; }
+.vy-cta-sub { color: rgba(255, 255, 255, .86); }
+.vy-section--cta-band .vy-btn-primary { background: #fff; color: #3730a3; box-shadow: none; }
+.vy-footer { margin-top: 0; padding-block: 2.5rem; border-top: 1px solid var(--vy-color-border); background: var(--vy-color-surface); }
+.vy-footer-inner, .vy-footer .vy-nav { max-width: var(--vy-content-width); margin-inline: auto; padding-inline: 1.25rem; width: 100%; }
+.vy-footer .vy-menu { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; list-style: none; padding: 0; margin: 0 0 1.2rem; }
+.vy-footer .vy-menu a { color: var(--vy-color-text-muted); text-decoration: none; font-size: .92rem; }
+.vy-footer .vy-menu a:hover { color: var(--vy-color-primary); }
+.vy-footer::after { content: "Setu is open source software under the AGPL-3.0 licence."; display: block; color: var(--vy-color-text-muted); font-size: .85rem; }
+
+/* Content pages ---------------------------------------------------------- */
+.vy-page, .vy-single, .vy-post-content, .vy-main > .vy-section--post-content { max-width: 46rem; margin-inline: auto; padding: 3rem 1.25rem; }
+pre, code { font-family: var(--setu-mono); }
+.vy-footer .vy-nav-toggle { display: none !important; }
+.vy-footer .vy-nav .vy-menu { display: flex !important; flex-direction: row; flex-wrap: wrap; }
+.vy-footer::after { max-width: var(--vy-content-width); margin-inline: auto; padding-inline: 1.25rem; }
+.vy-status-cards .vy-product-items { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 960px) { .vy-status-cards .vy-product-items { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .vy-status-cards .vy-product-items { grid-template-columns: 1fr; } }
+
+/* Feature grid uses .vy-cards / .vy-card: match the product cards. */
+.vy-cards .vy-card { background: var(--vy-color-surface); border: 1px solid var(--vy-color-border); border-radius: 12px; padding: 1.6rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04); transition: border-color .15s; }
+.vy-section[class*="vy-scope-"] .vy-cards .vy-card, .vy-section[class*="vy-scope-"] .vy-product-items > li { background: var(--vy-color-bg); }
+.vy-cards .vy-card:hover { border-color: color-mix(in srgb, var(--vy-color-primary) 55%, var(--vy-color-border)); }
+.vy-card-title { font-family: Sora, Inter, sans-serif; font-size: 1.12rem; letter-spacing: -.01em; margin: .5rem 0 .55rem; }
+.vy-card-title a { color: inherit; text-decoration: none; }
+.vy-card-title a:hover { color: var(--vy-color-primary); }
+.vy-card-body { margin: 0; color: var(--vy-color-text-muted); font-size: .96rem; line-height: 1.6; }
+.vy-cards .vy-eyebrow { margin: 0; font-size: .72rem; }
+.vy-cards { gap: 1.1rem; }
+#footer.vy-section--menu { display: none; } /* the footer menu is shown by the theme footer, not in the page body */
+.vy-main pre { white-space: pre-wrap; word-break: break-word; }

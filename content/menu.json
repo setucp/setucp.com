@@ -1,0 +1,13 @@
+{
+  "slug": "main",
+  "name": "Main",
+  "location": "header",
+  "items": [
+    { "label": "How it works", "url": "/#how" },
+    { "label": "Features", "url": "/#features" },
+    { "label": "Roadmap", "url": "/#roadmap" },
+    { "label": "Install", "url": "/install" },
+    { "label": "Docs", "url": "https://github.com/setucp/setu/tree/main/docs" },
+    { "label": "GitHub", "url": "https://github.com/setucp/setu" }
+  ]
+}

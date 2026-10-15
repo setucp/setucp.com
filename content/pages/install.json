@@ -1,0 +1,26 @@
+{
+  "title": "Install Setu",
+  "slug": "install",
+  "excerpt": "Install the Setu control panel on a fresh Ubuntu or Debian server with one command.",
+  "seo_description": "Install the Setu control panel on Ubuntu 22.04/24.04/26.04 or Debian 12/13 (x86_64 or aarch64) with one command, then add a server and your first app.",
+  "content": {
+    "schema_version": 1,
+    "blocks": [
+      { "kind": "paragraph", "attrs": { "text": "You need a fresh Ubuntu 22.04, 24.04 or 26.04, or Debian 12 or 13, server (x86_64 or aarch64), root access, ports 80 and 443 open, and a DNS name pointing at the server. The installer brings PostgreSQL and Caddy itself." } },
+      { "kind": "heading", "attrs": { "level": 2, "text": "Run the installer" } },
+      { "kind": "code", "attrs": { "language": "sh", "code": "curl -fsSLO https://github.com/setucp/setu/releases/latest/download/install.sh && sudo bash install.sh --panel-host panel.example.com" } },
+      { "kind": "paragraph", "attrs": { "text": "The script verifies the release archive against <code>SHA256SUMS</code>, installs <code>/opt/setu/setu</code>, creates the <code>setu</code> user and database, configures Caddy for the panel host and starts <code>setu.service</code>." } },
+      { "kind": "paragraph", "attrs": { "text": "No DNS name yet? Use <code>--tls internal</code> to have Caddy issue certificates from its own internal CA instead of ACME." } },
+      { "kind": "heading", "attrs": { "level": 2, "text": "Then, in the browser" } },
+      { "kind": "list", "attrs": { "ordered": true }, "children": [
+        { "kind": "paragraph", "attrs": { "text": "The installer prints <code>https://panel.example.com/setup</code> and a one-time setup token. Open the URL and paste the token." } },
+        { "kind": "paragraph", "attrs": { "text": "The wizard creates the owner account. This works exactly once." } },
+        { "kind": "paragraph", "attrs": { "text": "The wizard registers this server: run the <code>setu agent install</code> line it shows, as root. The server shows online within seconds." } },
+        { "kind": "paragraph", "attrs": { "text": "<strong>Apps, Add</strong>: paste or link an app manifest." } },
+        { "kind": "paragraph", "attrs": { "text": "<strong>New site</strong>: choose the app and a domain. Setu provisions the site, and it goes live with HTTPS, its own database, limits and a nightly backup." } }
+      ] },
+      { "kind": "heading", "attrs": { "level": 2, "text": "More" } },
+      { "kind": "paragraph", "attrs": { "text": "All installer flags, the manual install, upgrading and uninstalling are covered in the <a href=\"https://github.com/setucp/setu/blob/main/docs/INSTALL.md\">installation guide</a>. Sample app manifests, including Miniflux and hello-axum, are in the <a href=\"https://github.com/setucp/manifests\">manifests repository</a>." } }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Security",
+  "slug": "security",
+  "excerpt": "Setu's trust model in plain words, and how to report a vulnerability.",
+  "seo_description": "How Setu is built to limit what root can be asked to do, what it trusts, and how to report a vulnerability privately.",
+  "content": {
+    "schema_version": 1,
+    "blocks": [
+      { "kind": "heading", "attrs": { "level": 2, "text": "The trust model, plainly" } },
+      { "kind": "paragraph", "attrs": { "text": "The control plane is effectively root on every server that joins it: agents carry out the commands it queues, some through a privileged helper. Protect the control plane, its database and its secret key accordingly." } },
+      { "kind": "paragraph", "attrs": { "text": "The agent itself is not root. It reaches root only through <code>setu helper &lt;verb&gt;</code>: typed JSON on stdin, with no paths, modes or owners from the caller. The helper bounds <em>what</em> root can be asked to do, using typed verbs, fixed templates, paths derived from the site id and hostile archives refused, but not <em>who</em> asks." } },
+      { "kind": "list", "attrs": {}, "children": [
+        { "kind": "paragraph", "attrs": { "text": "Sites are untrusted. Each runs as its own user and can write only its own data and run directories." } },
+        { "kind": "paragraph", "attrs": { "text": "Sites on one server share the kernel, the local PostgreSQL instance (one database and role each) and Caddy." } },
+        { "kind": "paragraph", "attrs": { "text": "Secrets are sealed at rest, never put on a command line or in logs, and revealed only with the operator's password." } }
+      ] },
+      { "kind": "paragraph", "attrs": { "text": "The full model, the helper's verbs, the sudoers file and the firewall rules are in the <a href=\"https://github.com/setucp/setu/blob/main/docs/TRUST.md\">trust model</a> and <a href=\"https://github.com/setucp/setu/blob/main/docs/SECURITY.md\">security documentation</a>." } },
+      { "kind": "heading", "attrs": { "level": 2, "text": "Reporting a vulnerability" } },
+      { "kind": "paragraph", "attrs": { "text": "Please report security issues privately through GitHub's <a href=\"https://github.com/setucp/setu/security/advisories/new\">private vulnerability reporting</a>. Do not open a public issue. You should get an acknowledgement within three days. Fixes for the current minor release are published as a patch release with a security note in the changelog." } },
+      { "kind": "paragraph", "attrs": { "text": "The full policy, including supported versions and scope, is in <a href=\"https://github.com/setucp/setu/blob/main/SECURITY.md\">SECURITY.md</a>." } }
+    ]
+  }
+}
