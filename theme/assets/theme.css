@@ -122,3 +122,8 @@ pre, code { font-family: var(--setu-mono); }
 .vy-cards { gap: 1.1rem; }
 #footer.vy-section--menu { display: none; } /* the footer menu is shown by the theme footer, not in the page body */
 .vy-main pre { white-space: pre-wrap; word-break: break-word; }
+
+/* Search results and archives: the reading column, not the full width. */
+.vy-main > .vy-archive-title, .vy-main > .vy-post-list { max-width: 46rem; margin-inline: auto; padding-inline: 1.25rem; }
+.vy-main > .vy-archive-title { padding-top: clamp(2rem, 6vw, 3rem); margin-bottom: 1.5rem; font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem); letter-spacing: -0.02em; }
+.vy-main > .vy-post-list { display: grid; gap: 1rem; padding-bottom: 3rem; }
