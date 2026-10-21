@@ -4,7 +4,7 @@
   "location": "footer",
   "items": [
     { "label": "GitHub", "url": "https://github.com/setucp/setu" },
-    { "label": "Docs", "url": "https://github.com/setucp/setu/tree/main/docs" },
+    { "label": "Docs", "url": "/docs" },
     { "label": "Manifests", "url": "https://github.com/setucp/manifests" },
     { "label": "Releases", "url": "https://github.com/setucp/setu/releases" },
     { "label": "Security", "url": "/security" },
