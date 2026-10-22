@@ -1,0 +1,52 @@
+{
+  "title": "Blog",
+  "slug": "blog",
+  "excerpt": "Guides, engineering notes and operations advice for running single-binary web apps on your own server with Setu.",
+  "seo_title": "Setu Blog: self-hosting guides and engineering notes",
+  "seo_description": "Guides, engineering notes and operations advice for running single-binary web apps like Vyasa on your own VPS with the Setu control panel.",
+  "content": {
+    "schema_version": 1,
+    "blocks": [
+      {
+        "kind": "paragraph",
+        "attrs": {
+          "text": "Browse by topic: <a href=\"/category/guides\">Guides</a> \u00b7 <a href=\"/category/operations\">Operations</a> \u00b7 <a href=\"/category/engineering\">Engineering</a> \u00b7 <a href=\"/category/ecosystem\">Ecosystem</a>"
+        }
+      }
+    ]
+  },
+  "layout": [
+    {
+      "id": "header",
+      "kind": "header"
+    },
+    {
+      "id": "hero",
+      "kind": "hero",
+      "settings": {
+        "align": "center",
+        "eyebrow": "Setu blog",
+        "headline": "Notes on running your own apps",
+        "subhead": "Guides, engineering notes and operations advice for single-binary web apps on your own server."
+      }
+    },
+    {
+      "id": "body",
+      "kind": "post-content"
+    },
+    {
+      "id": "posts",
+      "kind": "latest-posts",
+      "settings": {
+        "count": 20
+      }
+    },
+    {
+      "id": "footer",
+      "kind": "menu",
+      "settings": {
+        "slug": "footer"
+      }
+    }
+  ]
+}

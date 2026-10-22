@@ -1,0 +1,212 @@
+[
+ {
+  "n": 1,
+  "slug": "why-setu-exists",
+  "working_title": "Why Setu exists",
+  "publish_at": "2026-10-24T15:11:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 2,
+  "slug": "single-binary-web-apps",
+  "working_title": "Single-binary web apps are underrated",
+  "publish_at": "2026-10-25T17:04:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 3,
+  "slug": "what-a-control-panel-should-do",
+  "working_title": "What a control panel should and shouldn't do",
+  "publish_at": "2026-10-26T10:41:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 4,
+  "slug": "setu-vs-cpanel-coolify-dokku",
+  "working_title": "Setu vs cPanel, Coolify and Dokku",
+  "publish_at": "2026-10-27T06:12:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 5,
+  "slug": "install-setu-in-five-minutes",
+  "working_title": "Install Setu in five minutes",
+  "publish_at": "2026-10-28T14:55:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 6,
+  "slug": "first-vyasa-site-on-setu",
+  "working_title": "Your first Vyasa site on Setu",
+  "publish_at": "2026-10-29T18:03:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 7,
+  "slug": "custom-domains-automatic-https-caddy",
+  "working_title": "Custom domains and automatic HTTPS with Caddy",
+  "publish_at": "2026-10-30T17:41:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 8,
+  "slug": "how-setu-backups-work",
+  "working_title": "How Setu backups work",
+  "publish_at": "2026-10-31T14:05:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 9,
+  "slug": "restoring-a-backup",
+  "working_title": "Restoring a site from a backup",
+  "publish_at": "2026-11-01T11:56:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 10,
+  "slug": "safe-updates-backup-first",
+  "working_title": "Safe app updates: backup first, every time",
+  "publish_at": "2026-11-02T14:54:00Z",
+  "writer": "A"
+ },
+ {
+  "n": 11,
+  "slug": "env-variables-and-secrets",
+  "working_title": "Environment variables and secrets in Setu",
+  "publish_at": "2026-11-03T16:32:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 12,
+  "slug": "many-sites-one-small-vps",
+  "working_title": "Running many sites on one small VPS",
+  "publish_at": "2026-11-04T15:58:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 13,
+  "slug": "setu-trust-model",
+  "working_title": "The Setu trust model",
+  "publish_at": "2026-11-05T11:25:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 14,
+  "slug": "privileged-helper-design",
+  "working_title": "Inside the privileged helper",
+  "publish_at": "2026-11-06T14:10:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 15,
+  "slug": "checksums-and-signed-releases",
+  "working_title": "Checksums and signed releases",
+  "publish_at": "2026-11-07T18:11:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 16,
+  "slug": "app-manifests-explained",
+  "working_title": "App manifests explained",
+  "publish_at": "2026-11-08T13:27:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 17,
+  "slug": "followed-manifests-update-notices",
+  "working_title": "Followed manifests: updates that find you",
+  "publish_at": "2026-11-09T13:37:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 18,
+  "slug": "postgres-database-per-site",
+  "working_title": "A Postgres database per site",
+  "publish_at": "2026-11-10T19:17:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 19,
+  "slug": "site-logs-and-journalctl",
+  "working_title": "Reading site logs: panel and journalctl",
+  "publish_at": "2026-11-11T10:23:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 20,
+  "slug": "monitoring-a-small-vps",
+  "working_title": "Monitoring a small VPS without a monitoring stack",
+  "publish_at": "2026-11-12T11:18:00Z",
+  "writer": "B"
+ },
+ {
+  "n": 21,
+  "slug": "site-limits-memory-cpu",
+  "working_title": "Resource limits: memory and CPU per site",
+  "publish_at": "2026-11-13T07:53:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 22,
+  "slug": "upgrading-setu-itself",
+  "working_title": "Upgrading Setu itself with setu upgrade",
+  "publish_at": "2026-11-14T06:53:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 23,
+  "slug": "hardening-ubuntu-for-setu",
+  "working_title": "Hardening an Ubuntu server for Setu",
+  "publish_at": "2026-11-15T12:54:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 24,
+  "slug": "cloudflare-in-front-of-setu",
+  "working_title": "Putting Cloudflare in front of Setu",
+  "publish_at": "2026-11-16T06:09:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 25,
+  "slug": "package-your-app-for-setu",
+  "working_title": "Packaging your own app for Setu",
+  "publish_at": "2026-11-17T19:19:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 26,
+  "slug": "writing-a-setu-manifest",
+  "working_title": "Writing a Setu manifest, step by step",
+  "publish_at": "2026-11-18T17:32:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 27,
+  "slug": "vyasa-docs-plugin-case-study",
+  "working_title": "Case study: a docs site from a Git folder",
+  "publish_at": "2026-11-19T08:08:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 28,
+  "slug": "how-setucp-com-runs-on-setu",
+  "working_title": "How setucp.com runs on Setu",
+  "publish_at": "2026-11-20T10:59:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 29,
+  "slug": "setu-roadmap",
+  "working_title": "Where Setu is going: the roadmap",
+  "publish_at": "2026-11-21T07:23:00Z",
+  "writer": "C"
+ },
+ {
+  "n": 30,
+  "slug": "lessons-building-setu",
+  "working_title": "Lessons from building Setu",
+  "publish_at": "2026-11-22T09:43:00Z",
+  "writer": "C"
+ }
+]
